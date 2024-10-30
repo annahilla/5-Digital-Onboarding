@@ -26,9 +26,13 @@ function App() {
     },
   ]
 
+  const nextStep = () => {
+    setStep(prev => prev + 1)
+  }
+
   return (
     <>
-      <Card currentCardData={tutorialData[step]} />
+      <Card currentCardData={tutorialData[step]} nextStep={nextStep} />
     </>
   )
 }
