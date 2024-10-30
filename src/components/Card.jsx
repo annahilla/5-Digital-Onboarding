@@ -1,7 +1,9 @@
 import { IoMdArrowForward } from "react-icons/io";
+import { IoArrowBack } from "react-icons/io5";
 
-const Card = ({ currentCardData, nextStep }) => {
+const Card = ({ currentCardData, tutorialData, step, nextStep, prevStep }) => {
     const bgColor = currentCardData.bgColor;
+    console.log(step);
 
     return (
         <div className="card-container">
@@ -11,9 +13,21 @@ const Card = ({ currentCardData, nextStep }) => {
                     <h2>{currentCardData.title}</h2>
                     <p>{currentCardData.description}</p>
                 </div>
-                <button className="btn" onClick={nextStep}>
-                    <IoMdArrowForward />
-                </button>
+                <div className="btn-container">
+                    {
+                        step !== 0
+                        && <button className="btn btn-prev" onClick={prevStep}>
+                            <IoArrowBack />
+                        </button>
+
+                    }
+                    {
+                        step !== tutorialData.length - 1
+                        && <button className="btn btn-next" onClick={nextStep}>
+                            <IoMdArrowForward />
+                        </button>
+                    }
+                </div>
             </div>
         </div>
     )

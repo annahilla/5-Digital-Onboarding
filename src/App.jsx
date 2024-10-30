@@ -6,7 +6,7 @@ import meditationImage from './assets/meditation.svg';
 import './App.css'
 
 function App() {
-  const [step, setStep] = useState(0)
+  const [step, setStep] = useState(0);
 
   const tutorialData = [
     {
@@ -30,12 +30,16 @@ function App() {
   ]
 
   const nextStep = () => {
-    setStep(prev => prev + 1)
+    setStep(prev => prev + 1);
+  }
+
+  const prevStep = () => {
+    setStep(prev => prev - 1);
   }
 
   return (
     <>
-      <Card currentCardData={tutorialData[step]} nextStep={nextStep} />
+      <Card currentCardData={tutorialData[step]} tutorialData={tutorialData} step={step} nextStep={nextStep} prevStep={prevStep} />
     </>
   )
 }
