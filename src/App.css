@@ -25,7 +25,7 @@
 
 .card-container .card .card-text {
     padding: 1rem 2rem;
-    height: 14rem;
+    height: 10rem;
 }
 
 .card-container .card .card-text h2 {
@@ -37,13 +37,38 @@
     color: rgb(90, 88, 88);
 }
 
+.card-container .card .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem;
+    padding-bottom: 1rem;
+}
+
+.card-container .card .progress-container {
+    display: flex;
+    gap: .3rem;
+    margin: 0 2rem;
+}
+
+.card-container .card .progress-container .progress {
+    height: .3rem;
+    width: .3rem;
+    background-color: lightgrey;
+    border-radius: 50%;
+}
+
+.card-container .card .progress-container .progress.active {
+    background-color: black;
+    width: .8rem;
+    border-radius: 1rem;
+}
+
 .card-container .card .btn-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     display: flex;
     gap: 1rem;
-    margin: 2rem;
+    margin: 0 2rem;
 }
 
 .card-container .card .btn-container .btn {
@@ -59,8 +84,6 @@
     justify-content: center;
     font-size: 1.3rem;
 }
-
-.card-container .card .btn-container .btn-next {}
 
 .card-container .card .btn-container .btn-prev {
     background-color: transparent;
