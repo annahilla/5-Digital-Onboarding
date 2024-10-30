@@ -1,16 +1,9 @@
+import Indicator from "./Indicator";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoArrowBack } from "react-icons/io5";
 
 const Card = ({ currentCardData, tutorialData, step, nextStep, prevStep }) => {
     const bgColor = currentCardData.bgColor;
-
-    // const progressStep1 = step === 0 ? 'progress active' : 'progress';
-    // const progressStep2 = step === 1 ? 'progress active' : 'progress';
-    // const progressStep3 = step === 2 ? 'progress active' : 'progress';
-
-    const progressSteps = tutorialData.map((_, index) => (
-        <div key={index} className={step === index ? 'progress active' : 'progress'}></div>
-    ))
 
     return (
         <div className="card-container">
@@ -21,9 +14,7 @@ const Card = ({ currentCardData, tutorialData, step, nextStep, prevStep }) => {
                     <p>{currentCardData.description}</p>
                 </div>
                 <div className="card-footer">
-                    <div className="progress-container">
-                        {progressSteps}
-                    </div>
+                    <Indicator tutorialData={tutorialData} step={step} />
                     <div className="btn-container">
                         {
                             step !== 0
