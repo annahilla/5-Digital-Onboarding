@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-      <Card currentCardData={tutorialData[step]} tutorialData={tutorialData} step={step} nextStep={nextStep} prevStep={prevStep} />
+      <Card currentCardData={tutorialData[step]} tutorialData={tutorialData} step={step} setStep={setStep} nextStep={nextStep} prevStep={prevStep} />
     </>
   )
 }

@@ -57,6 +57,7 @@
     width: .3rem;
     background-color: lightgrey;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .card-container .card .progress-container .progress.active {

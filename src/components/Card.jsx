@@ -2,7 +2,7 @@ import Indicator from "./Indicator";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoArrowBack } from "react-icons/io5";
 
-const Card = ({ currentCardData, tutorialData, step, nextStep, prevStep }) => {
+const Card = ({ currentCardData, tutorialData, step, nextStep, prevStep, setStep }) => {
     const bgColor = currentCardData.bgColor;
 
     return (
@@ -14,7 +14,7 @@ const Card = ({ currentCardData, tutorialData, step, nextStep, prevStep }) => {
                     <p>{currentCardData.description}</p>
                 </div>
                 <div className="card-footer">
-                    <Indicator tutorialData={tutorialData} step={step} />
+                    <Indicator tutorialData={tutorialData} step={step} setStep={setStep} />
                     <div className="btn-container">
                         {
                             step !== 0
