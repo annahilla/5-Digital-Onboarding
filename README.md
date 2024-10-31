@@ -1,8 +1,42 @@
-# React + Vite
+# Digital Onboarding App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+This is a digital onboarding app project made with React, featuring several interactive cards that allow users to navigate forward and backward, with smooth animations to enhance user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologies used
+
+- **HTML**: For structuring the content.
+- **CSS**: For styling and layout, including animations.
+- **React**: For implementing app logic and dynamic style switching.
+- **Vite**: For setting up the React project with fast development and optimized build.
+
+## Features
+
+- **Animated Transitions:** Cards animate as the user moves forward or backward.
+- **Progress Indicator:** Displays the current step and allows direct access to any step.
+
+## Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/annahilla/5-Digital-Onboarding
+   ```
+
+2. Open folder on your code editor:
+    ```bash
+   cd 5-Digital-Onboarding && code .
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run project:
+
+   ```bash
+   npm run dev
+   ```
