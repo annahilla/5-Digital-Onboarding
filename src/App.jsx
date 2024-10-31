@@ -55,6 +55,7 @@ function App() {
             nextStep={nextStep} 
             prevStep={prevStep} 
             animationClass={animationClass}
+            setAnimationClass={setAnimationClass}
       />
     </>
   )
