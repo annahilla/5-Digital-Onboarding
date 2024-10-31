@@ -7,6 +7,7 @@ import './App.css'
 
 function App() {
   const [step, setStep] = useState(0);
+  const [animationClass, setAnimationClass] = useState("");
 
   const tutorialData = [
     {
@@ -30,16 +31,31 @@ function App() {
   ]
 
   const nextStep = () => {
-    setStep(prev => prev + 1);
+    setAnimationClass('disappear-left');
+    setTimeout(() => {
+      setStep(prev => prev + 1);
+      setAnimationClass('appear-right');
+    }, 300);
   }
 
   const prevStep = () => {
-    setStep(prev => prev - 1);
+    setAnimationClass('disappear-right');
+    setTimeout(() => {
+      setStep(prev => prev - 1);
+      setAnimationClass('appear-left');
+    }, 300);
   }
 
   return (
     <>
-      <Card currentCardData={tutorialData[step]} tutorialData={tutorialData} step={step} setStep={setStep} nextStep={nextStep} prevStep={prevStep} />
+      <Card currentCardData={tutorialData[step]} 
+            tutorialData={tutorialData} 
+            step={step} 
+            setStep={setStep} 
+            nextStep={nextStep} 
+            prevStep={prevStep} 
+            animationClass={animationClass}
+      />
     </>
   )
 }

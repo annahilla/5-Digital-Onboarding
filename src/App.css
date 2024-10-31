@@ -15,7 +15,72 @@
     border-radius: 2rem;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
 }
+
+.card-container .card.disappear-left {
+    animation: disappear-left .3s forwards;
+}
+
+.card-container .card.appear-right {
+    animation: appear-right .3s forwards;
+}
+
+.card-container .card.disappear-right {
+    animation: disappear-right .3s forwards;
+}
+
+.card-container .card.appear-left {
+    animation: appear-left .3s forwards;
+}
+
+@keyframes disappear-left {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes appear-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes disappear-right {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes appear-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
 
 .card-container .card .card-img {
     width: 100%;

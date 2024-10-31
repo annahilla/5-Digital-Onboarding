@@ -1,6 +1,6 @@
 const Indicator = ({ tutorialData, step, setStep }) => {
     const goToStep = (index) => {
-        setStep(index)
+        setStep(index);
     }
 
     const progressSteps = tutorialData.map((_, index) => (

@@ -2,12 +2,12 @@ import Indicator from "./Indicator";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoArrowBack } from "react-icons/io5";
 
-const Card = ({ currentCardData, tutorialData, step, nextStep, prevStep, setStep }) => {
+const Card = ({ currentCardData, tutorialData, step, nextStep, prevStep, setStep, animationClass }) => {
     const bgColor = currentCardData.bgColor;
 
     return (
         <div className="card-container">
-            <div className="card">
+            <div className={`card ${animationClass}`} id={`card-${step + 1}`}>
                 <img className="card-img" src={currentCardData.image} style={{ backgroundColor: bgColor }} alt={currentCardData.title} />
                 <div className="card-text">
                     <h2>{currentCardData.title}</h2>
